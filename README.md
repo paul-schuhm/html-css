@@ -21,6 +21,7 @@
 
 ### Liens utiles
 
+- [MDN Web Docs](https://developer.mozilla.org/fr/), **la documentation (semi)officielle** sur les technologies et standards du web;
 - [Liste des éléments HTML5](https://developer.mozilla.org/fr/docs/Web/HTML/Element). Parcourir la doc en cas de besoin ou découvrir de nouveaux éléments utiles;
 - [Markup Validation Service du W3C](https://validator.w3.org) pour valider son markup HTML avant de le mettre en production;
 - [Structurer le document HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content) et [Flux normal du document](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Introduction), sur la MDN;

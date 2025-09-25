@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Markup</title>
+  <meta name="description" content="Utilisation du markup HTML  pour une bonne sémantique et une bonne accessibilité">
+  <meta name="keywords" content="HTML, sémantique, accesibilité,">
+  <meta name="author" content="Paul Schuhmacher">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Titre principal</h1>
+    <nav class="navbar ..."></nav>
+  </header>
+
+<main>
+
+    <section>
+        <h2>Première partie du contenu </h2>
+        <p>Lore ipsum</p>
+    </section>
+
+    <section>
+        <h2>Deuxième partie du contenu </h2>
+        <p>Lore ipsum</p>
+    </section>
+
+<section>
+    <h2>Liste des articles</h2>
+    <ul>
+        <li>
+            <article>
+                <header>
+                    <h3>Titre de l'article</h3>
+                    <p>Extrait de l'article</p>
+                    <a href="#">Lire l'article</a>
+            </header>
+            <footer>Footer de l'article</footer>
+        </article>
+    </li>
+</ul>
+</section>
+</main>
+
+<aside>
+Contenu qui n'a rien à voir avec le contenu principal de cette page (autre nav, message, contenu annexe)
+</aside>
+
+<footer>
+Le footer de la page
+<address>Mes informations de contact</address>
+</footer>
+
+<script src="main.js" type="module"></script>
+</body>
+
+</html>

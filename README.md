@@ -15,7 +15,7 @@
 
 ## HTML/CSS
 
-- [Exercice d'intégration à partir d'un template donné](./exercices/), avec des connaissances de base en CSS (quelques sélecteurs, propriétés, sans flexbox ni grid)
+- [Exercice d'intégration à partir d'un template donné](./exercices/integration/), avec des **connaissances de base** en CSS (quelques sélecteurs, propriétés, *sans flexbox ni grid* !)
 
 ## Références
 

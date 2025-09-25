@@ -3,6 +3,8 @@
 - [html-css](#html-css)
   - [HTML](#html)
   - [Références](#références)
+    - [Liens utiles](#liens-utiles)
+    - [Ouvrages utiles](#ouvrages-utiles)
 
 
 ## HTML
@@ -12,6 +14,7 @@
 
 ## Références
 
+### Liens utiles
 
 - [Liste des éléments HTML5](https://developer.mozilla.org/fr/docs/Web/HTML/Element). Parcourir la doc en cas de besoin
 - [Markup Validation Service du W3C](https://validator.w3.org) pour valider son markup HTML avant de le mettre en production
@@ -23,6 +26,8 @@
 - [Grid](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Grids), MDN
 - [Design responsive avec les media querries](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries), [syntaxe améliorée récemment](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#am%C3%A9liorations_syntaxiques_avec_la_sp%C3%A9cification_de_niveau_4), MDN
 - [CSS Tricks](https://css-tricks.com/), excellent site sur le CSS. Notamment [le guide consacré à Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) et [celui consacré à CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+### Ouvrages utiles
 
 > À avoir à portée, feuilleter, "vivre avec"
 

@@ -8,6 +8,8 @@
     - [Ouvrages utiles](#ouvrages-utiles)
 
 
+Développer et intégrer des pages web structurées et accessibles.
+
 ## HTML
 
 - [Les éléménts HTML **à connaître**](html-feuille-de-route.md)

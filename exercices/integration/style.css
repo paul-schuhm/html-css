@@ -1,0 +1,57 @@
+html{
+    margin: 0 20%;
+}
+
+h1 {
+    border: 1px solid black;
+    padding: 5px 12px;
+    display: inline;
+}
+
+header {
+    margin: 24px;
+    text-align: center;
+}
+
+.floating-left {
+    float: left;
+    margin-right: 12px;
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+h2 {
+    text-decoration: underline;
+    text-underline-position: below;
+    text-decoration-color: rgb(208, 6, 6);
+    text-decoration-thickness: 12px;
+}
+
+.container {
+    /* Aligner le contenu du conteneur (dont le texte...). Aligne des éléments inline */
+    text-align: center;
+    p {
+        display: inline-block;
+        /* Réaligner le texte à gauche */
+        text-align: left;
+        /* 50% de la largeur du conteneur parent */
+        width: 50%;
+        /* Aligner en haut (alignement vertical des elements inline) ! */
+        vertical-align: top;
+    }
+}

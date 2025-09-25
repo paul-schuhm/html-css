@@ -2,6 +2,7 @@
 
 - [html-css](#html-css)
   - [HTML](#html)
+  - [HTML/CSS](#htmlcss)
   - [Références](#références)
     - [Liens utiles](#liens-utiles)
     - [Ouvrages utiles](#ouvrages-utiles)
@@ -11,6 +12,10 @@
 
 - [Les éléménts HTML **à connaître**](html-feuille-de-route.md)
 - [Page HTML illustrant l'usage des balises principales](./demos/basic.html)
+
+## HTML/CSS
+
+- [Exercice d'intégration à partir d'un template donné](./exercices/), avec des connaissances de base en CSS (quelques sélecteurs, propriétés, sans flexbox ni grid)
 
 ## Références
 

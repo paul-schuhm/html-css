@@ -16,6 +16,14 @@
 - [Liste des éléments HTML5](https://developer.mozilla.org/fr/docs/Web/HTML/Element). Parcourir la doc en cas de besoin
 - [Markup Validation Service du W3C](https://validator.w3.org) pour valider son markup HTML avant de le mettre en production
 
+- [Structurer le document HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content), MDN
+- [Flux normal du document](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Introduction), MDN;
+- [W3C Validator](https://validator.w3.org/), service en ligne du W3C pour valider le document HTML;
+- [Flexbox](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox), MDN
+- [Grid](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Grids), MDN
+- [Design responsive avec les media querries](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries), [syntaxe améliorée récemment](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#am%C3%A9liorations_syntaxiques_avec_la_sp%C3%A9cification_de_niveau_4), MDN
+- [CSS Tricks](https://css-tricks.com/), excellent site sur le CSS. Notamment [le guide consacré à Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) et [celui consacré à CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
 > À avoir à portée, feuilleter, "vivre avec"
 
 - [HTML5 Pocket Reference, 5th Edition](https://www.oreilly.com/library/view/html5-pocket-reference/9781449368777/), de Jennifer Robbins, publié chez O'Reilly Media, 2013. Pour se rafraichir la mémoire ou découvrir des éléments HTML utiles;

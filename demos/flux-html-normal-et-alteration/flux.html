@@ -13,7 +13,12 @@
 
         nav ul {
             list-style-type: none;
-            padding:0;
+            padding: 0;
+        }
+
+        blockquote {
+            border: 1px dashed grey;
+            padding: 12px;
         }
     </style>
 </head>
@@ -21,35 +26,49 @@
 
 <body style="position: relative;">
 
-    <header style="">
-        <h1>Flux du document</h1>
-        <nav style="position: fixed; top: 0; background: white; padding: 5px; width: 100%; border: 1px solid black; z-index: 1;">
+    <header style="margin-top: 150px;">
+
+        <blockquote>
+            Inspecter le code source pour voir les commentaires
+        </blockquote>
+
+
+        <h1>Flux du document : propriétés <code>display</code> et <a
+                href="https://developer.mozilla.org/fr/docs/Web/CSS/position"><code>position</code></a> </h1>
+
+        <!-- Une navbar en position fixed : L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément. L'élément est positionné relativement au bloc englobant initial formé par la zone d'affichage du navigateur (viewport) -->
+        <nav
+            style="position: fixed; top: 0; background: white; padding: 5px; width: 100%; border: 1px solid black; z-index: 1;">
             <ul>
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
+                <li>
+                    <a href="">
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="">À propos</a>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <h2>Display</h2>
+
+
+    <p>La propriété <code>display</code> de chaque élément permet de calculer sa position et ses dimensions sur la zone
+        de rendu afin de peindre les pixels.</p>
+
+
+    <H3>Élément de type <code>display: block;</code></H3>
     <p>Un paragraphe est un élément de type <em>block</em> (<code>display: block;</code>) </p>
 
-    <img src="./demo-site-web-html-css-static/img/huitre.avif" width="200" alt="">
-
-
-    <p>Un élément <em>inline</em> : occupe que <span>l'espace nécessaire pour afficher</span> le contenu (par de retour à la ligne).</p>
-    <p>Un élément <em>inline-block</em> se comporte comme un block inline, sauf que l'on peut définir les dimensions hauteur et largeur(par de retour à la ligne).</p>
-
-
-
-    <div style="display: inline-block; position: relative;">
-        <div style="position: absolute; width: 100%; height: 100%; background: rgba(13, 13, 13, 0.686); opacity: 0.5;"></div>
-        <img src="./demo-site-web-html-css-static/img/huitre.avif" width="200" alt="">
-    </div>
-
-    <img src="./demo-site-web-html-css-static/img/huitre.avif" width="200" alt="">
-    <img src="./demo-site-web-html-css-static/img/huitre.avif" width="200" alt="">
-    <img src="./demo-site-web-html-css-static/img/huitre.avif" width="200" alt="">
+    <p>Une liste, ordonnée ou non, est de type <code>block</code>, chacun de ses items <code>li</code> également, voyez
+        plûtot :</p>
 
     <ul>
         <li>Acheter des croquettes</li>
@@ -57,40 +76,158 @@
         <li>Haut les cœurs, ami</li>
     </ul>
 
-    <p>La propriété <code>display</code> a une valeur par défaut pour chaque élément. Il est possible de la surcharger via la propriété CSS <code>display</code></p>
+    <H3>Élément de type <code>display: inline;</code></H3>
 
-    <p>Le display permet de calculer la position de chaque élément sur la zone de rendu (pixels)</p>
+    <p>Un élément <em style="background-color: bisque;">inline</em>, comme <code>em</code> n'occupe que <span>l'espace
+            nécessaire pour afficher</span> son
+        contenu (ne repousse pas les autres éléments à la ligne suivante). <a
+            style="background-color: rgb(197, 195, 194);"
+            href="https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/a">Un hyperlien est également un
+            élément inline</a> </p>
+
+    <H3>Élément de type <code>display: inline-block;</code></H3>
+
+    <img style="border: 1px solid black;" src="./assets/banner.jpg" width="200" alt="">
+    <img style="border: 1px solid black;" src="./assets/banner.jpg" width="200" alt="">
+    <img style="border: 1px solid black;" src="./assets/banner.jpg" width="200" alt="">
+
+    <p>Une image, par exemple, est de type <code>inline-block</code>. Elle ocuppe uniquement une zone égale à sa taille
+        mais on peut redéfinir ses dimensions.</p>
+
+    <p>Un élément <em>inline-block</em> se comporte :</p>
+
+    <ul>
+        <li>
+            comme un élément <code>inline</code>, il n'occupe que l'espace nécessaire (propre à ses dimensions)/ne
+            repousse pas l'élément suivant à la ligne
+        </li>
+        <li>
+            comme un élement <code>block</code> au sens où l'on peut définir ses dimensions hauteur et largeur via les
+            propriétés <code>height</code> et <code>width</code> respectivement.
+        </li>
+    </ul>
+
+
+    <blockquote>La propriété <code>display</code> a une valeur par défaut pour chaque élément. Il est possible de la
+        surcharger via la propriété CSS <code>display</code>.</blockquote>
+
+
+    <h2>Positionnement</h2>
+
+    <h3>Position static (par défaut)</h3>
+
+    <p>Par défaut, les éléments sont placés dans <em>le flux normal</em> du document, les uns à la suite des autres, en
+        appliquant leur règles de définies par leur propriétés <code>display</code>. Ils sont positionnés de manière
+        <code>static</code>.</p>
+
+    <h2>Position relative</h2>
+
+    <p>Ci-dessous un élément <code>inline-block</code> en position <code>relative</code> : </p>
+
+    <div style="display: inline-block; position: relative; top: 12px; left: 35px;">
+        <div style="position: absolute; width: 100%; height: 100%; background: rgba(13, 13, 13, 0.686); opacity: 0.5;">
+        </div>
+        <img src="./demo-site-web-html-css-static/img/huitre.avif" width="200" alt="">
+    </div>
 
     <p>C'est le <em>flot</em> (ou flux) naturel du document.</p>
 
     <h2>Le positionnement</h2>
 
+    <h3>Position static</h3>
+
     <p>Il est possible d'altérer le flot naturel du document et la position de chaque élément.</p>
     <p style="position: static; background: yellow; padding: 5px;">Par défaut, les éléments lorsqu'ils sont placés suivant le flot naturel ont une <code>position: static</code></p>
 
 
-    <p style="position: sticky; background: pink; top: 0; left: 30px; z-index:2;">
-        Ce paragraphe est positionné de manière absolue <code>position: absolute;</code>. Sortie du flux, comme en relatif, mais cette fois il est positionné par rapport à son élément parent (body ici). Attention, il faut définir le parent comme <code>position: relative;</code> !!!
-    </p>
+    <h3>Position relative</h3>
 
-    <p style="position: relative;">
+
+    <p style=" background: blue; color: white; position: relative; top: 15px; left: 15px;">
         Ce paraphraphe est positionné de manière relative (décalé par rapport à sa position d'origine)
         <code>position: relative;</code>
     </p>
 
-    <p style="position: absolute; background: blue; top: 0;">
-        Ce paragraphe est positionné de manière absolue <code>position: absolute;</code>. Sortie du flux, comme en relatif, mais cette fois il est positionné par rapport à son élément parent (body ici). Attention, il faut définir le parent comme <code>position: relative;</code> !!!
+    <h3>Position absolute</h3>
+
+    <p>
+        L'élément est <strong>retiré du flux normal</strong>  et aucun espace n'est créé pour l'élément sur la page. Il est ensuite <strong>positionné par rapport à son ancêtre le plus proche qui est positionné s'il y en a</strong>  un ou par rapport au bloc englobant initial sinon. La position finale de l'élément est déterminée par les valeurs de top, right, bottom et left.
     </p>
+
+    <a href="#paps">Voir l'élément en position absolute</a>
+
+        <!-- Position absolute : L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est **positionné** s'il y en a un ou par rapport au bloc englobant initial sinon. La position finale de l'élément est déterminée par les valeurs de top, right, bottom et left. -->
+        <p id="paps" style="padding: 12px; position: absolute; background: rgb(2, 2, 77); color: white; top: -101px;">
+            Ce paragraphe est positionné de manière absolue <code>position: absolute;</code>. Sortie du flux, comme en
+            relatif, mais cette fois il est positionné par rapport à son élément parent (body ici). Attention, pour que cela
+            fonctionne il faut définir le parent comme <code>position: relative;</code> !
+        </p>
+
+    <h3>Position sticky</h3>
+    <p style="position: sticky; background: pink; top: 0; left: 30px; z-index:2;">
+
+        La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à son bloc englobant selon les valeurs de top, right, bottom et left. Dans tous les cas, y compris avec les éléments table, cela n'affecte pas la position des autres éléments.
+
+        Ce paragraphe est positionné de manière <code>sticky</code>  (<code>position: sticky;</code>). Sortie du flux, comme en <code>position: relative;</code> ! Scrollez vers le bas pour observer son comportement !
+    </p>
+
+    
+
+
 
 
     <p>
 
 
-Logoden biniou degemer mat an penn ar bed pla’hig, gwirionez danvez leal he vi kanañ traoñ naetaat yezh, ennañ ijinañ ki an ur kiger din. Teurel pal gwenn ar petra beajiñ klask skuizhañ kluchañ, Sant-Nouga dro Kastell-Paol alies ouzhit loa leal saout kegin, galon trubard glac’har ganin dezhañ heol toullañ. An Alre ouzhin tri kregiñ speredek terriñ kreiz pomper matezh, anv troad adarre merkañ garmiñ outi tour dud kas, kaozeadenn c’hi etre  divjod c’hwi Gwengamp gleb. Bragoù kaeraat vatezh feiz oan gwirionez galv tour c’harr, ac’hano wec’h penn tremen skorn lakaat skeud tavarnour linenn, egisto trugarez sadorn rimiañ bodet degas Briad. Gousperoù ouzhoc’h toull kelenner war kluchañ poent ar reiñ, ar lipat eget  digant plant a egile drezon goulenn, Kernev eeun dra re er ivin pegañ. C’hartoñs lakaat dianav gwazh arar gouest berr c’hein Landreger, ur he bragoù gallek envel stumm puñs panevet  dlead, ha kavout plij maen Liger leur kav. Va un vuoc’h roc’h dimeurzh gwir n’eus eured leue, yod Gerveur war pe traonienn aozañ darev loar vezañ, c’horf kant kezeg hanternoz daouzek bluenn kreiz. Krouer moulañ istor kenañ c’hemener warnomp war c’helien Abbarez dirak kaier mui trubard gwer, spi don keuz Mederieg hag da gaer Gwaien tremen an ennon. Aon tost marv eget  munutenn merc’her sec’hañ kerkoulz blot sukr drezi mousc’hoarzhin pri votez, ruz warnomp eta gervel ifern pomper ha pignat hennont labous magañ. Lost Montroulez an stank eo Plelann-Vihan c’hastell kenderv davet , Malo c’har diouzh gwiskañ aotrou uhelder vro dlead gousperoù, echu ebeul askell kroc’hen merc’hed c’hav saveteiñ.
+        Logoden biniou degemer mat an penn ar bed pla’hig, gwirionez danvez leal he vi kanañ traoñ naetaat yezh, ennañ
+        ijinañ ki an ur kiger din. Teurel pal gwenn ar petra beajiñ klask skuizhañ kluchañ, Sant-Nouga dro Kastell-Paol
+        alies ouzhit loa leal saout kegin, galon trubard glac’har ganin dezhañ heol toullañ. An Alre ouzhin tri kregiñ
+        speredek terriñ kreiz pomper matezh, anv troad adarre merkañ garmiñ outi tour dud kas, kaozeadenn c’hi etre
+        divjod c’hwi Gwengamp gleb. Bragoù kaeraat vatezh feiz oan gwirionez galv tour c’harr, ac’hano wec’h penn tremen
+        skorn lakaat skeud tavarnour linenn, egisto trugarez sadorn rimiañ bodet degas Briad. Gousperoù ouzhoc’h toull
+        kelenner war kluchañ poent ar reiñ, ar lipat eget digant plant a egile drezon goulenn, Kernev eeun dra re er
+        ivin pegañ. C’hartoñs lakaat dianav gwazh arar gouest berr c’hein Landreger, ur he bragoù gallek envel stumm
+        puñs panevet dlead, ha kavout plij maen Liger leur kav. Va un vuoc’h roc’h dimeurzh gwir n’eus eured leue, yod
+        Gerveur war pe traonienn aozañ darev loar vezañ, c’horf kant kezeg hanternoz daouzek bluenn kreiz. Krouer moulañ
+        istor kenañ c’hemener warnomp war c’helien Abbarez dirak kaier mui trubard gwer, spi don keuz Mederieg hag da
+        gaer Gwaien tremen an ennon. Aon tost marv eget munutenn merc’her sec’hañ kerkoulz blot sukr drezi
+        mousc’hoarzhin pri votez, ruz warnomp eta gervel ifern pomper ha pignat hennont labous magañ. Lost Montroulez an
+        stank eo Plelann-Vihan c’hastell kenderv davet , Malo c’har diouzh gwiskañ aotrou uhelder vro dlead gousperoù,
+        echu ebeul askell kroc’hen merc’hed c’hav saveteiñ.
 
-Kromm bragoù lost digor tamall votez e eor ar, muzul boued roud gwerenn hini degas martolod kuzhat kuzuliañ, lezel chaseal saoz daouzek distreiñ harz hadañ. Purgator prenestr war arvar doujañ ni pakañ piz draonienn, ifern da dirak kartoñs biken drezo meur a tomm, gwaskañ evit kavout labous c’haol stag an. Rodell dimezell gervel Montroulez muzul chal Ar Gall houarn e, tavarn ganit dek hon etre diskenn gwelloc’h frouezh kerzu, Kemperle porpant gousperoù ur c’hontadenn ar eñ. Skol Gwaien kelenn chaseour tour ar netra waz logod, c’hontrol pod bev pignat paot druez endervezh señin bez, e divskouarn boued niverenn etre  oas brezel. Hennont bale arat las pomper sul sioul gwengolo moger, labourat daou deñvalijenn tomm seitek harzoù c’hontadenn serret gozh, Egineg bouzar beg te c’hig kenderv penaos. Torfed Kermouster aour liorzh legumaj lous butun chase bouton, e c’hreisteiz stal Sant-Tegoneg niverenn betek dirak  vandenn solier, tennañ seblantout an kreisteiz ha gomz gleb. Kleñved horolaj yenijenn kuzuliañ drezo da leal warnañ, klañv, gambr e sevel porzh armel gwechall amanenn ezel Santez-Anna-Wened, Baen-Veur kelenner feunten Arre Sant c’hanon skuizhañ. Argol skeudenn gwalenn evidon mab moger fentigelloù nemet  an, gwaz biniou dorgenn c’higer pounner aet pod vrec’h kemmañ, speredekañ war tu gwengolo lizherenn tomm ha. Ganeoc’h glav tavarn diskenn ha korn gwern serret komz, c’hontrol treut boull aet mat amann dreist karrezek gaer, an danvez diaes lien sal yezh kontrol. Kontrol e distreiñ nec’h trec’h teñval gentañ ganeoc’h bodet, bank den vloaz vilin penn spi wirionez loer gwaskañ, Santeg degemer kaol sistr kluchañ enni Plourin-Montroulez.
+        Kromm bragoù lost digor tamall votez e eor ar, muzul boued roud gwerenn hini degas martolod kuzhat kuzuliañ,
+        lezel chaseal saoz daouzek distreiñ harz hadañ. Purgator prenestr war arvar doujañ ni pakañ piz draonienn, ifern
+        da dirak kartoñs biken drezo meur a tomm, gwaskañ evit kavout labous c’haol stag an. Rodell dimezell gervel
+        Montroulez muzul chal Ar Gall houarn e, tavarn ganit dek hon etre diskenn gwelloc’h frouezh kerzu, Kemperle
+        porpant gousperoù ur c’hontadenn ar eñ. Skol Gwaien kelenn chaseour tour ar netra waz logod, c’hontrol pod bev
+        pignat paot druez endervezh señin bez, e divskouarn boued niverenn etre oas brezel. Hennont bale arat las pomper
+        sul sioul gwengolo moger, labourat daou deñvalijenn tomm seitek harzoù c’hontadenn serret gozh, Egineg bouzar
+        beg te c’hig kenderv penaos. Torfed Kermouster aour liorzh legumaj lous butun chase bouton, e c’hreisteiz stal
+        Sant-Tegoneg niverenn betek dirak vandenn solier, tennañ seblantout an kreisteiz ha gomz gleb. Kleñved horolaj
+        yenijenn kuzuliañ drezo da leal warnañ, klañv, gambr e sevel porzh armel gwechall amanenn ezel
+        Santez-Anna-Wened, Baen-Veur kelenner feunten Arre Sant c’hanon skuizhañ. Argol skeudenn gwalenn evidon mab
+        moger fentigelloù nemet an, gwaz biniou dorgenn c’higer pounner aet pod vrec’h kemmañ, speredekañ war tu
+        gwengolo lizherenn tomm ha. Ganeoc’h glav tavarn diskenn ha korn gwern serret komz, c’hontrol treut boull aet
+        mat amann dreist karrezek gaer, an danvez diaes lien sal yezh kontrol. Kontrol e distreiñ nec’h trec’h teñval
+        gentañ ganeoc’h bodet, bank den vloaz vilin penn spi wirionez loer gwaskañ, Santeg degemer kaol sistr kluchañ
+        enni Plourin-Montroulez.
 
-Gwalenn pinvidik vihan melen buan park Sant-Maloù plijout ziskouez, e fri Sant-Nouga gar vatezh Malo poultrenn miz kreñv, evit kav kustum farsus bandenn klevout gouiziek. Kurun ha warnoc’h e gaoued rannañ ger wechoù Montroulez, itron kerf e reas Atlantel muioc’h n’eus a meurzh, per egistomp troc’hañ plouz ma yaouankiz werenn. Chaseal pri bezh rumm peoc’h ampart gwirionez pegañ kastell Gwened dezhañ banne dro ennoc’h, patatez votez kalet sigaretenn tenn abeg toull drezon alc’houez riskl Pont’n-Abad. Dreist c’hwi torgenn kreion kerkent prennañ keuz bloavezh Pempont gouelañ c’henderv war kalz piler, wirionez maen serret ouzhit dañvad daou chadenn fall gallout genou paotr. Merkañ dale here aod dan ar unan outo skañv, pemzek loen skignañ biz Lokmikael (an-Traezh) voutailh vezañ netra hegarat, hep eñ ouzhin nec’hin Kermouster kalz Pornizhan. Kaer arnev dir mar Yec’hed koef reizh bluenn koulz, dihuniñ lamp tregont ennañ walc’h penn ennomp kalz liv, meskañ leal hennont estreget  ankouna’haat kreion paotred. Ha tost da izel nann Arzhal pred, ur fentigelloù strad Plouezoc’h biniou stal loa, ganto merkañ bolz outañ gouez c’hontadenn, enor re mel barrad stad. Aet iskis lammat kerkent egiston pemzek teñval Gwaien da, evezh stouiñ c’horf don tremen daol ankouna’haat c’hoant Plourin-Montroulez, Aradon gegin deuet dra egile baner fellout. Señin gousperoù skorn bruched lost mat kraou gloan n’eus, stivell speredekañ dan Roazhon jiletenn ha pod mouchouer war, bandenn poull tud pesketaer diwezhañ yod Malo. Dall unnek traonienn disul betek avat moc’h lonkañ Baz, tavarn horolaj martolod kroaz bodañ vezañ solier c’hardeur soudard, dianav nijal kardeur pla’hig divskouarn fur godell.
+        Gwalenn pinvidik vihan melen buan park Sant-Maloù plijout ziskouez, e fri Sant-Nouga gar vatezh Malo poultrenn
+        miz kreñv, evit kav kustum farsus bandenn klevout gouiziek. Kurun ha warnoc’h e gaoued rannañ ger wechoù
+        Montroulez, itron kerf e reas Atlantel muioc’h n’eus a meurzh, per egistomp troc’hañ plouz ma yaouankiz werenn.
+        Chaseal pri bezh rumm peoc’h ampart gwirionez pegañ kastell Gwened dezhañ banne dro ennoc’h, patatez votez kalet
+        sigaretenn tenn abeg toull drezon alc’houez riskl Pont’n-Abad. Dreist c’hwi torgenn kreion kerkent prennañ keuz
+        bloavezh Pempont gouelañ c’henderv war kalz piler, wirionez maen serret ouzhit dañvad daou chadenn fall gallout
+        genou paotr. Merkañ dale here aod dan ar unan outo skañv, pemzek loen skignañ biz Lokmikael (an-Traezh) voutailh
+        vezañ netra hegarat, hep eñ ouzhin nec’hin Kermouster kalz Pornizhan. Kaer arnev dir mar Yec’hed koef reizh
+        bluenn koulz, dihuniñ lamp tregont ennañ walc’h penn ennomp kalz liv, meskañ leal hennont estreget ankouna’haat
+        kreion paotred. Ha tost da izel nann Arzhal pred, ur fentigelloù strad Plouezoc’h biniou stal loa, ganto merkañ
+        bolz outañ gouez c’hontadenn, enor re mel barrad stad. Aet iskis lammat kerkent egiston pemzek teñval Gwaien da,
+        evezh stouiñ c’horf don tremen daol ankouna’haat c’hoant Plourin-Montroulez, Aradon gegin deuet dra egile baner
+        fellout. Señin gousperoù skorn bruched lost mat kraou gloan n’eus, stivell speredekañ dan Roazhon jiletenn ha
+        pod mouchouer war, bandenn poull tud pesketaer diwezhañ yod Malo. Dall unnek traonienn disul betek avat moc’h
+        lonkañ Baz, tavarn horolaj martolod kroaz bodañ vezañ solier c’hardeur soudard, dianav nijal kardeur pla’hig
+        divskouarn fur godell.
 
     </p>
 

@@ -1,6 +1,6 @@
-# html-css
+# Développement web avec HTML 5 et CSS 3, les fondamentaux
 
-- [html-css](#html-css)
+- [Développement web avec HTML 5 et CSS 3, les fondamentaux](#développement-web-avec-html-5-et-css-3-les-fondamentaux)
   - [HTML](#html)
     - [Objectifs](#objectifs)
     - [Démos](#démos)

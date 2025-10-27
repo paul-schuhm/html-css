@@ -13,3 +13,5 @@ Creer un **layout responsive de grid sur 2 tailles d'écran** :
 
 ## Références utiles
 
+- [Grid CSS](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_grid_layout);
+- [Media queries](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)

@@ -2,22 +2,60 @@
 
 - [html-css](#html-css)
   - [HTML](#html)
-  - [HTML/CSS](#htmlcss)
+    - [Objectifs](#objectifs)
+    - [Démos](#démos)
+  - [CSS](#css)
+    - [Objectifs](#objectifs-1)
+    - [Démos](#démos-1)
+  - [Exercices](#exercices)
   - [Références](#références)
     - [Liens utiles](#liens-utiles)
     - [Ouvrages utiles](#ouvrages-utiles)
 
-
-Développer et intégrer des pages web structurées et accessibles.
+Apprendre à développer et intégrer des pages web structurées et accessibles, les fondamentaux en HTML et CSS.
 
 ## HTML
 
-- [Les éléménts HTML **à connaître**](html-feuille-de-route.md)
-- [Page HTML illustrant l'usage des balises principales](./demos/basic.html)
+### Objectifs
 
-## HTML/CSS
+- A quoi sert le HTML;
+- Connaître les **éléments importants** pour **structurer** et donner une **sémantique** correcte aux documents : html, head, meta, body, header, footer, main, section, h1..h6, article, a, form, div;
+- Comprendre le *flux* normal d'un document HTML (`position: static;`) et les propriétés des éléments `block`, `inline` et `inline-block` (propriété `display`);
+- Comprendre comment altérer le flux normal du document via la propriété `position` : relative, absolute, fixed, sticky, float (images);
+- Connaitre et utiliser les attributs génériques des éléments : `id`, `name` (input de formulaire), `class`;
+- Faire de la veille : HTML évolue en permanence, éléments (plus ou moins) récemment introduits : [canvas](https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/canvas), [summary](https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/summary), [details](https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/details), [dialog](https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/dialog), [abbr](https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/abbr), etc.
 
-- [Exercice d'intégration à partir d'un template donné](./exercices/integration/), avec des **connaissances de base** en CSS (quelques sélecteurs, propriétés, *sans flexbox ni grid* !)
+### Démos
+
+- [Les éléménts HTML **à connaître**](html-feuille-de-route.md);
+- [Page HTML illustrant l'usage des balises principales](./demos/html-les-bases/);
+- [Flux normal (et propriété `display`) et altéaration avec la propriété `position`](./demos/flux-html-normal-et-alteration/);
+
+## CSS
+
+### Objectifs
+
+- A quoi sert le CSS ;
+- [Styles en cascade](https://css-tricks.com/css-cascade-layers/#introduction-what-are-cascade-layers) dans l'arbre des noeuds et priorités des règles CSS (lesquelles s'appliquent) ?
+- Connaître quelques propriétés de base ;
+- Savoir utiliser les sélecteurs CSS ;
+- Savoir Débuguer la pile de règles CSS via les *devtools* ;
+- Savoir utiliser Flexbox (*flexible boxes*)
+- Connaître Grid
+- Comprendre ce qu'est le *responsive design* et l'usage des *media querries*.
+
+### Démos
+
+- [Flexbox](./demos/css-flexbox/) ;
+- [Grid](./demos/css-grid/) ;
+- [Utiliser les pseudo-éléments](./demos/pseudo-elements/)
+- [Responsive font size](./demos/responsive-font-size-dynamique/)
+
+## Exercices
+
+- [Exercice d'intégration à partir d'un template donné](./exercices/tp-integration/), avec des **connaissances de base** en CSS (quelques sélecteurs, propriétés, *sans flexbox ni grid* !);
+- [TP responsive 1 avec grid](./exercices/tp-responsive-grid/);
+- [TP responsive 2](./exercices/tp-responsive/);
 
 ## Références
 

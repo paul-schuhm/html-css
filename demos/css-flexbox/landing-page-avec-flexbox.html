@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banner avec flexbox</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            div.flex-container {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-image: url('../template-landing-page/banner.jpg');
+                height: 50vh;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(116, 116, 116, 0.5);
+                }
+            }
+
+            h1 {
+                color: white;
+                font-size: 72px;
+                z-index: 2;
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                list-style: none;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                }
+            }
+
+            /* Pseudo élément */
+        </style>
+
+
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">A propos</a></li>
+                </ul>
+            </nav>
+            <div class="flex-container">
+                <h1>Website Title</h1>
+            </div>
+        </header>
+    </body>
+
+</html>

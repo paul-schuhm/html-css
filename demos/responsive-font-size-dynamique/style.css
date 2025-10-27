@@ -1,0 +1,23 @@
+/* S'applique à toutes les tailles d'écran */
+
+html {
+    font-size: calc(1.5rem + 3vw);
+}
+
+@media (max-width: 576px) { 
+    /* Mobile : Ces regles vont s'appliquer aux devices dont la largeur est inférieure ou égale à 576px */
+
+   html{
+    background: red;
+   }
+
+}
+
+@media (min-width: 576px) { 
+    /* Desktop : Ces regles vont s'appliquer aux devices dont la largeur est inférieure ou égale à 576px */
+
+    html{
+        background: blue;
+    }
+
+}

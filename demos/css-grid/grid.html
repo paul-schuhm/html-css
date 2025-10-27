@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+        /* Mobile first */
+        div.container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (min-width: 960px) {
+            div.container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                height: 100vh;
+            }
+
+            div.block-1 {
+                background: red;
+                grid-area: 1/1/4/2;
+            }
+
+            div.block-2 {
+                background: blue;
+                grid-area: 1/2/2/4;
+            }
+
+            div.block-3 {
+                background: green;
+                grid-area: 2/2/4/3;
+            }
+
+            div.block-4 {
+                background: magenta;
+                grid-area: 2/3/3/4;
+
+            }
+
+            div.block-5 {
+                background: yellow;
+                grid-area: 3/3/4/4;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>CSS Grid</h1>
+
+    <div class="container">
+        <div class="block-1">Lorem ipsum</div>
+        <div class="block-2">2</div>
+        <div class="block-3">3</div>
+        <div class="block-4">4</div>
+        <div class="block-5">Lorem ipsum</div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            html {
+                width: 60%;
+                margin: auto;
+            }
+
+            ul {
+                list-style-type: "- ";
+            }
+
+            li {
+
+                /* Mettre première lettre en lower case */
+                &::first-letter {
+                    text-transform: lowercase;
+                }
+
+                /* Si l'item ne contient pas lui meme de liste */
+                &:not(:has(ul))::after {
+                    content: " ; "
+                }
+
+                /* Si c'est le dernier élément */
+                &:not(:has(ul)):last-child::after {
+                    content: "."
+                }
+
+                /* Si c'est une liste imbriquée */
+                ul {
+                    li {
+                        &::after {
+                            content: ", "
+                        }
+
+                        &:last-child::after {
+                            content: " ; "
+                        }
+                    }
+                }
+
+                /* Si le dernier élément de la liste est un item imbriqué */
+                &:last-child ul {
+                    li {
+                        &:last-child::after {
+                            content: "."
+                        }
+                    }
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Démonstration des pseudo-éléments <code>::after</code> et <code>::before</code></h1>
+
+        <p> <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements">Les pseudo-éléments</a> sont des mots-clefs (<code>::before, ::after, ::first-line, ::first-letter</code>, etc.) que l'on peut ajouter à un sélecteur pour mettre en forme une partie du ou des éléments sélectionnés. Ces pseudo-éléments sont très utiles pour injecter, transformer du contenu de manière systématique.</p>
+        <H2>Exemple : appliquer les règles de ponctuation correctes pour une liste</H2>
+        <p>Selon <a
+                href="https://documentation.insp.gouv.fr/insp/doc/SYRACUSE/140086/lexique-des-regles-typographiques-en-usage-a-l-imprimerie-nationale-imprimerie-nationale?_lg=fr-FR">les
+                règles typographiques en usage à l'imprimerie nationale</a>, chaque paragraphe d'une énumération
+            introduite par un deux-points, sauf le dernier, se termine par un
+            point-virgule, quelle que soit sa ponctuation interne. Si l'un de ces paragraphes se subdivise à son tour,
+            chaque paragraphe, sauf le dernier, se termine par une virgule.</p>
+        <p>Voici une liste où tous les signes de ponctuation sont placés en CSS avec les pseudo-éléments : </p>
+        </p>
+        <ul>
+            <li>Premier item</li>
+            <li>Deuxième item</li>
+            <li>Troisième élément qui comprend lui-même :
+                <ul>
+                    <li>un premier élément</li>
+                    <li>un deuxième élément</li>
+                    <li>un troisième élément</li>
+                </ul>
+            </li>
+            <li>Quatrième item</li>
+            <li>Cinquième item</li>
+            <li>Sixième item qui se subdivise lui-même en :
+                <ul>
+                    <li>un premier élément</li>
+                    <li>un deuxième élément</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p>Pour éviter d'avoir à placer ces signes de ponctuation manuellement et faciliter l'ajout ou le déplacement
+            d'un élément, on peut utiliser <a href="https://developer.mozilla.org/fr/docs/Web/CSS/::after">le
+                pseudo-élément <code>::after</code></a> pour appliquer ces règles.</p>
+
+
+        <p>On peut également utiliser le <a href="https://developer.mozilla.org/fr/docs/Web/CSS/::before"> pseudo
+                élément <code>::before</code></a> pour systématiquement placer un contenu (icone, texte, etc.) avant un
+            élément.</p>
+    </body>
+
+</html>

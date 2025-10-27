@@ -1,0 +1,112 @@
+/* Mobile first */
+
+
+/* On déclare les variables dans le pseudo élément root par convention */
+:root{
+    /* Déclare une variable breakpoint-large (desktop) */
+    /* Déclare une variable breakpoint-medium (tablette) */
+    --breakpoint-medium: 768px;
+    --breakpoint-large: 960px;
+    --backgournd-color : rgb(202, 20, 20);
+    --primary-color: rgb(0, 128, 85);
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--backgournd-color);
+}
+
+header {
+  background-image: url("double-bubble-dark.png");
+  color: #fafafa;
+}
+
+header > h1 {
+  text-align: center;
+  padding: 70px;
+  margin: 0;
+  transition: padding 0.3s;
+}
+
+nav {
+  background-color: #161616;
+  text-align: center;
+  padding: 30px;
+}
+
+nav > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+nav > ul > li {
+  display: inline;
+  padding: 10px;
+}
+
+nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+section {
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 10px;
+}
+
+section > h2 {
+  margin: 0;
+}
+
+section > h2::before {
+  content: " ➡ ";
+}
+
+article > h3 {
+  font-size: 2rem;
+  margin: 10px;
+}
+
+footer {
+  font-size: smaller;
+  padding: 10px;
+  text-align: center;
+}
+
+/* breaking point : taille où l'on bascule d'une mise en forme à l'autre */
+@media only screen and (min-width: var(--breakpoint-large)) {
+    /* Appliquer aux écrans dont la taille est supérieure à 960px */
+    main{
+        display: flex;
+        flex-wrap: wrap;
+    
+        & > section {
+            /* flex-grow flex-shrink flex-basis => raccourci par flex*/
+            flex: 1 0 44%;
+        }
+    }    
+}
+
+@media only screen and (max-width: var(--breakpoint-large)) {
+    /* Appliquer aux écrans dont la taille est inférieure à 959px */
+
+    header > h1 {
+      padding: 30px;
+    }
+  
+    nav {
+      padding: 10px;
+    }
+  }
+

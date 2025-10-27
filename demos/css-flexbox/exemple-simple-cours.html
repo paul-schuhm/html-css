@@ -1,0 +1,94 @@
+<style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;  
+  flex: 1;
+}
+/* article:nth-of-type(3) {
+  flex: 2;
+} */
+
+article {
+  flex: 1 200px;
+}
+
+article:nth-of-type(3) {
+  flex: 2 400px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  height: 150px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  align-items: stretch;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+
+button{
+    order: 1;
+}
+
+button:nth-of-type(4){
+    order: 0;
+}
+
+@media screen and (width: 600px) {
+  body {
+    color: red;
+  }
+}
+
+</style>
+
+<header>
+  <h1>Un exemple de flexbox</h1>
+</header>
+<section>
+  <article>
+    <h2>Premier article</h2>
+    <p>Contenu…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Contenu…</p>
+  </article>
+  <article>
+    <h2>Troisième article</h2>
+    <p>Contenu…</p>
+  </article>
+</section>
+
+<div>
+  <button>Sourire</button>
+  <button>Rire</button>
+  <button>Cligner de l'œil</button>
+  <button>Hausser les épaules</button>
+  <button>Rougir</button>
+</div>

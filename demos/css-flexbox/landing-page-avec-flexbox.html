@@ -1,76 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Banner avec flexbox</title>
-        <style>
-            html,
-            body {
-                margin: 0;
-                padding: 0;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner avec flexbox</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* La section devient notre flex container, pour centrer le titre h1 facilement */
+        div.flex-container {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* L'image est placée en background */
+            background-image: url('./assets/banner.jpg');
+            /* Fixe la dimension de l'image à l'ouverture de la page */
+            height: 50vh;
+
+            /* L'overlay pour améliorer le contraste entre l'image et le titre, sans modifier l'image ! */
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(116, 116, 116, 0.5);
             }
+        }
 
-            div.flex-container {
-                position: relative;
+        h1 {
+            color: white;
+            font-size: 72px;
+            z-index: 2;
+        }
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
 
-                background-image: url('../template-landing-page/banner.jpg');
-                height: 50vh;
+            list-style: none;
+            padding: 0;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(116, 116, 116, 0.5);
-                }
+            li {
+                display: inline-block;
             }
+        }
 
-            h1 {
-                color: white;
-                font-size: 72px;
-                z-index: 2;
-            }
+    </style>
+</head>
 
-            ul {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">A propos</a></li>
+            </ul>
+        </nav>
+        <div class="flex-container">
+            <h1>Website Title</h1>
 
-                list-style: none;
-                padding: 0;
-
-                li {
-                    display: inline-block;
-                }
-            }
-
-            /* Pseudo élément */
-        </style>
-
-
-    </head>
-
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">A propos</a></li>
-                </ul>
-            </nav>
-            <div class="flex-container">
-                <h1>Website Title</h1>
-            </div>
-        </header>
-    </body>
+        </div>
+        <h2>Objectif</h2>
+        <p>
+            Créer une <em>landing page</em> avec une section image et un titre superposé centré, en s'aidant de
+            <code>flexbox</code>. Comparer avec le code à fournir <em>sans flexbox</em> !
+        </p>
+        <p>
+            Cette démo montre également l'usage courant du pseudo élément <code>::after</code> pour placer un overlay sur l'image pour améliorer le contraste avec le titre.
+        </p>
+        <p>
+            Inspecter le CSS commenté, placé directement dans la page web dans la balise <code>style</code>.
+        </p>
+    </header>
+</body>
 
 </html>

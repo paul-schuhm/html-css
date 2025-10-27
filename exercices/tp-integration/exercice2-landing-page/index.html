@@ -4,13 +4,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Landing page (sans flexbox)</title>
 
         <style>
             body {
                 margin: 0;
             }
 
+            /* Placer le container en relative pour pouvoir mettre le h1 en absolute */
             header div {
                 position: relative;
                 height: 50vh;
@@ -26,11 +27,13 @@
             }
 
             header h1 {
+                /* Centrage manuel */
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%,-50%);
+                /* Décaler de la largeur et hauteur, car le point supérieur gauche sert de position. */
                 /* centre parfaitement */
+                transform: translate(-50%,-50%);
                 color: white;
                 font-size: 72px;
                 font-weight: 700;
@@ -50,7 +53,7 @@
                 }
             }
 
-            /* Pseudo élément */
+            /* Pseudo élément pour créer l'overlay */
             header div::after {
                 content: "";
                 position: absolute;
@@ -80,6 +83,13 @@
         </header>
 
         <h2>Our website</h2>
+
+
+        <h2>Objectifs</h2>
+
+        <p>
+            Créer une <em>landing page</em> avec une section image et un titre superposé centré, sans utiliser <code>flexbox</code>. <a href=""></a> Comparer avec le code à fournir <em>avec flexbox</em> !
+        </p>
 
 
     </body>

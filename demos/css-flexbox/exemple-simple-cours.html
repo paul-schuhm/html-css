@@ -1,94 +1,114 @@
 <style>
     body {
-  font-family: sans-serif;
-  margin: 0;
-}
-header {
-  background: purple;
-  height: 100px;
-}
-h1 {
-  text-align: center;
-  color: white;
-  line-height: 100px;
-  margin: 0;
-}
+        font-family: sans-serif;
+    }
 
-article {
-  padding: 10px;
-  margin: 10px;
-  background: aqua;  
-  flex: 1;
-}
-/* article:nth-of-type(3) {
-  flex: 2;
-} */
+    header {
+        background: purple;
+        height: 100px;
+    }
 
-article {
-  flex: 1 200px;
-}
+    h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+    }
 
-article:nth-of-type(3) {
-  flex: 2 400px;
-}
+    article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+        flex: 1;
+    }
 
-section {
-  display: flex;
-  flex-wrap: wrap;
-}
+    article {
+        flex: 1 200px;
+    }
 
-div {
-  height: 150px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: space-around;
-  justify-content: space-between;
-  align-items: stretch;
-}
-button {
-  font-size: 18px;
-  line-height: 1.5;
-  width: 15%;
-}
+    article:nth-of-type(3) {
+        flex: 2 400px;
+    }
 
-button{
-    order: 1;
-}
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-button:nth-of-type(4){
-    order: 0;
-}
+    div {
+        height: 150px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        justify-content: space-between;
+        align-items: stretch;
+    }
 
-@media screen and (width: 600px) {
-  body {
-    color: red;
-  }
-}
+    button {
+        font-size: 18px;
+        line-height: 1.5;
+        width: 15%;
+    }
 
+    button {
+        order: 1;
+    }
+
+    button:nth-of-type(4) {
+        order: 0;
+    }
 </style>
 
-<header>
-  <h1>Un exemple de flexbox</h1>
-</header>
-<section>
-  <article>
-    <h2>Premier article</h2>
-    <p>Contenu…</p>
-  </article>
-  <article>
-    <h2>Second article</h2>
-    <p>Contenu…</p>
-  </article>
-  <article>
-    <h2>Troisième article</h2>
-    <p>Contenu…</p>
-  </article>
-</section>
+<!DOCTYPE html>
+<html lang="en">
 
-<div>
-  <button>Sourire</button>
-  <button>Rire</button>
-  <button>Cligner de l'œil</button>
-  <button>Hausser les épaules</button>
-  <button>Rougir</button>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Un exemple de flexbox</h1>
+    </header>
+    <section>
+        <article>
+            <h2>Premier article</h2>
+            <p>Contenu…</p>
+        </article>
+        <article>
+            <h2>Second article</h2>
+            <p>Contenu…</p>
+        </article>
+        <article>
+            <h2>Troisième article</h2>
+            <p>Contenu…</p>
+        </article>
+    </section>
+
+    <div>
+        <button>Sourire</button>
+        <button>Rire</button>
+        <button>Cligner de l'œil</button>
+        <button>Hausser les épaules</button>
+        <button>Rougir</button>
+    </div>
+
+    <p>
+        Démonstration de <a href="https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox">flexbox</a>, <a href="https://developer.mozilla.org/fr/docs/Learn_web_development/Core/CSS_layout/Flexbox#voici_un_exemple_simple">basée sur le documentation de la MDN.</a> 
+    </p>
+
+    <H2>Objectifs</H2>
+    <p>
+        Apprenez à utiliser :
+    </p>
+    <ul>
+        <li>Les propriétés d'alignement suivant l'axe principale et l'axe perpendiculaire;</li>
+        <li>Les possibilités de reposionnement avec <code>order</code>; </li>
+        <li>Les propriétés d'organisation de l'espace disponible avec <code>flex</code>;</li>
+        <li>Tester l'évolution de la disposition de vos éléments en changeant la taille de l'écran.</li>
+    </ul>
+</body>
+
+</html>
